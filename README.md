@@ -1,25 +1,19 @@
-Arkanoid en JavaScript
-Proyecto inspirado en Arkanoid, desarrollado con HTML5 Canvas, CSS y JavaScript modular. El objetivo del juego es destruir todos los ladrillos usando una pelota que rebota sobre la paleta controlada por el jugador 
-.
+# Arkanoid en JavaScript
 
-Características
-Juego arcade tipo Arkanoid con renderizado en Canvas 
-.
+Proyecto inspirado en **Arkanoid**, desarrollado con **HTML5 Canvas, CSS y JavaScript modular**.  
+El objetivo del juego es destruir todos los ladrillos usando una pelota que rebota sobre la paleta controlada por el jugador.
 
-Arquitectura modular separada por responsabilidades: pelota, paleta, ladrillos, entrada, interfaz y almacenamiento 
-.
+## Características
 
-Sistema de puntaje en pantalla con visualización del récord más alto 
-.
+- Juego arcade tipo Arkanoid con renderizado en Canvas.
+- Arquitectura modular separada por responsabilidades: pelota, paleta, ladrillos, entrada, interfaz y almacenamiento.
+- Sistema de puntaje en pantalla con visualización del récord más alto.
+- Persistencia del high score mediante `localStorage`.
+- Uso de sprites e imágenes para el fondo y los ladrillos.
 
-Persistencia del high score mediante localStorage 
-.
+## Estructura del proyecto
 
-Uso de sprites e imágenes para el fondo y los ladrillos 
-.
-
-Estructura del proyecto
-
+```bash
 arkanoid/
 ├── index.html
 ├── css/
@@ -36,37 +30,32 @@ arkanoid/
     ├── bkg.png
     ├── bricks.png
     └── sprite.png
-    
-La lógica principal del juego vive en main.js, mientras que cada módulo encapsula una parte específica del comportamiento general del proyecto 
-. Esta organización facilita el mantenimiento, la lectura del código y la ampliación futura del juego 
-.
+```
 
-Tecnologías usadas
-HTML5
+La lógica principal del juego vive en `main.js`, mientras que cada módulo encapsula una parte específica del comportamiento general del proyecto. Esta organización facilita el mantenimiento, la lectura del código y la ampliación futura del juego.
 
-CSS3
+## Tecnologías usadas
 
-JavaScript ES Modules
+- HTML5
+- CSS3
+- JavaScript ES Modules
+- Canvas API
+- `localStorage`
 
-Canvas API
+## Cómo jugar
 
-localStorage
+1. Abre el proyecto en el navegador.
+2. Mueve la paleta con las flechas izquierda/derecha o con las teclas `A` y `D`.
+3. Evita que la pelota caiga y destruye todos los ladrillos para sumar puntos.
 
-Cómo jugar
-Abre el proyecto en el navegador.
+## Funcionalidades destacadas
 
-Mueve la paleta con las flechas izquierda/derecha o con las teclas A y D 
-.
+### Puntaje y récord
 
-Evita que la pelota caiga y destruye todos los ladrillos para sumar puntos 
-.
+El juego incrementa el puntaje cada vez que se destruye un ladrillo y guarda automáticamente el mejor resultado alcanzado por el jugador usando `localStorage`.  
+Esto permite conservar el récord incluso después de cerrar o recargar la página.
 
-Funcionalidades destacadas
-Puntaje y récord
-El juego incrementa el puntaje cada vez que se destruye un ladrillo, y guarda automáticamente el mejor resultado alcanzado por el jugador usando localStorage 
-. Esto permite conservar el récord incluso después de cerrar o recargar la página 
-.
+### Interfaz del juego
 
-Interfaz del juego
-La interfaz dibuja información en el canvas, como los FPS, el puntaje actual y el mejor puntaje registrado 
-. Esto mantiene toda la experiencia visual integrada dentro del propio juego
+La interfaz dibuja información en el canvas, como los FPS, el puntaje actual y el mejor puntaje registrado.  
+Esto mantiene toda la experiencia visual integrada dentro del propio juego.
