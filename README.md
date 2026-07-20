@@ -1,5 +1,5 @@
 Arkanoid en JavaScript
-Proyecto inspirado en Arkanoid, desarrollado con HTML5 Canvas, CSS y JavaScript modular. El objetivo del juego es destruir todos los ladrillos usando una pelota que rebota sobre la paleta controlada por el jugador 
+Proyecto inspirado en Arkanoid, desarrollado con HTML5 Canvas, CSS y JavaScript. El objetivo del juego es destruir todos los ladrillos usando una pelota que rebota sobre la paleta controlada por el jugador 
 .
 
 Características
