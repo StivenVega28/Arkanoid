@@ -19,9 +19,8 @@ Uso de sprites e imágenes para el fondo y los ladrillos
 .
 
 Estructura del proyecto
-bash
 
-.
+arkanoid/
 ├── index.html
 ├── css/
 │   └── style.css
