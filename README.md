@@ -20,6 +20,7 @@ Uso de sprites e imágenes para el fondo y los ladrillos
 
 Estructura del proyecto
 bash
+
 .
 ├── index.html
 ├── css/
@@ -36,6 +37,7 @@ bash
     ├── bkg.png
     ├── bricks.png
     └── sprite.png
+    
 La lógica principal del juego vive en main.js, mientras que cada módulo encapsula una parte específica del comportamiento general del proyecto 
 . Esta organización facilita el mantenimiento, la lectura del código y la ampliación futura del juego 
 .
