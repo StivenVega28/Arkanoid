@@ -1,16 +1,27 @@
-# Arkanoid Game
+Arkanoid en JavaScript
+Proyecto inspirado en Arkanoid, desarrollado con HTML5 Canvas, CSS y JavaScript modular. El objetivo del juego es destruir todos los ladrillos usando una pelota que rebota sobre la paleta controlada por el jugador 
+.
 
-Un clon del clásico juego Arkanoid desarrollado en JavaScript.
+Características
+Juego arcade tipo Arkanoid con renderizado en Canvas 
+.
 
-## Estructura del Proyecto
+Arquitectura modular separada por responsabilidades: pelota, paleta, ladrillos, entrada, interfaz y almacenamiento 
+.
 
-```
-arkanoid/
+Sistema de puntaje en pantalla con visualización del récord más alto 
+.
+
+Persistencia del high score mediante localStorage 
+.
+
+Uso de sprites e imágenes para el fondo y los ladrillos 
+.
+
+Estructura del proyecto
+bash
+.
 ├── index.html
-├── assets/
-│   ├── sprite.png
-│   ├── bricks.png
-│   └── bkg.png
 ├── css/
 │   └── style.css
 ├── js/
@@ -21,44 +32,40 @@ arkanoid/
 │   ├── input.js
 │   ├── ui.js
 │   └── storage.js
-└── README.md
-```
+└── assets/
+    ├── bkg.png
+    ├── bricks.png
+    └── sprite.png
+La lógica principal del juego vive en main.js, mientras que cada módulo encapsula una parte específica del comportamiento general del proyecto 
+. Esta organización facilita el mantenimiento, la lectura del código y la ampliación futura del juego 
+.
 
-## Descripción de Archivos
+Tecnologías usadas
+HTML5
 
-- **index.html**: Archivo principal HTML que carga todos los recursos
-- **assets/**: Carpeta que contiene las imágenes del juego
-  - `sprite.png`: Sprite de la paleta
-  - `bricks.png`: Sprite de los ladrillos
-  - `bkg.png`: Imagen de fondo
-- **css/style.css**: Estilos del juego
-- **js/**: Módulos JavaScript del juego
-  - `main.js`: Inicialización y bucle principal del juego
-  - `ball.js`: Lógica de la pelota (movimiento y dibujo)
-  - `paddle.js`: Lógica de la paleta (movimiento y dibujo)
-  - `bricks.js`: Lógica de los ladrillos (generación, dibujo y colisiones)
-  - `input.js`: Manejo de entrada del teclado
-  - `ui.js`: Funciones de interfaz de usuario
-  - `storage.js`: Funcionalidad de almacenamiento (placeholder para futuras características)
+CSS3
 
-## Cómo Jugar
+JavaScript ES Modules
 
-Abre `index.html` en tu navegador web.
+Canvas API
 
-### Controles
+localStorage
 
-- **Flecha Izquierda** o **A**: Mover la paleta a la izquierda
-- **Flecha Derecha** o **D**: Mover la paleta a la derecha
+Cómo jugar
+Abre el proyecto en el navegador.
 
-## Características
+Mueve la paleta con las flechas izquierda/derecha o con las teclas A y D 
+.
 
-- Movimiento fluido a 60 FPS
-- Detección de colisiones
-- Ladrillos con colores aleatorios
-- Sistema de puntuación FPS en pantalla
+Evita que la pelota caiga y destruye todos los ladrillos para sumar puntos 
+.
 
-## Tecnologías Utilizadas
+Funcionalidades destacadas
+Puntaje y récord
+El juego incrementa el puntaje cada vez que se destruye un ladrillo, y guarda automáticamente el mejor resultado alcanzado por el jugador usando localStorage 
+. Esto permite conservar el récord incluso después de cerrar o recargar la página 
+.
 
-- HTML5 Canvas
-- JavaScript (ES6+)
-- CSS3
+Interfaz del juego
+La interfaz dibuja información en el canvas, como los FPS, el puntaje actual y el mejor puntaje registrado 
+. Esto mantiene toda la experiencia visual integrada dentro del propio juego
